@@ -1,41 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header form {
+  display: flex;
+}
+
+header input[type="text"] {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+header button[type="submit"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+}
+
+aside {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav li {
+  margin-bottom: 0.5rem;
+}
+
+aside nav li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
 .box {
-    display: inline-block;
-    width: 30%;
-    height: 200px;
-    margin: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-  }
-  
-  .recommendations-box {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .recommendations-box h2 {
-    margin-top: 0;
-  }
-  
-  .recommendations-box ul {
-    margin-top: 0;
-  }
-  
-  .bought-products {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .total-button {
-    display: block;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
+  flex-basis: calc(50% - 1rem);
+  height: 200px;
+  margin: 0.5rem;
+  background-color: #ccc;
+}
+
+.bought-products {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.bought-products li {
+  margin-bottom: 0.5rem;
+}
+
+.total-button {
+  display: block;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
