@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade');
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,10 +14,17 @@ header {
   padding: 1rem;
   background-color: #333;
   color: #fff;
+  
+}
+
+h1 {
+  
 }
 
 header h1 {
   font-size: 2rem;
+  font-family: 'Bungee Shade', cursive;
+ 
 }
 
 header form {
