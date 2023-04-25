@@ -6,8 +6,9 @@ body {
   padding-bottom: 40px;
   background-color: #eee;
   box-sizing: border-box;
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Alkatra', cursive;
 }
+
 
 /* Style for the sign-in form */
 .form-signin {
@@ -65,4 +66,9 @@ body {
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
+}
+
+aside {
+
+  display: none;
 }
