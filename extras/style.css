@@ -98,3 +98,7 @@ main {
   cursor: pointer;
 }
 
+h3 {
+  position: relative;
+  left:450px;
+}

@@ -9,6 +9,7 @@ body {
   font-family: 'Alkatra', cursive;
 }
 
+
 /* Style for the sign-in form */
 .form-signin {
   max-width: 330px;
@@ -67,3 +68,7 @@ body {
   white-space: nowrap;
 }
 
+aside {
+
+  display: none;
+}
