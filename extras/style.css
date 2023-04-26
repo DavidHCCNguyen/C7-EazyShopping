@@ -99,6 +99,5 @@ main {
 }
 
 h3 {
-  position: relative;
-  left:450px;
+  position: inherit;
 }
