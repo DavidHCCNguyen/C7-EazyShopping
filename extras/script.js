@@ -2,19 +2,23 @@
 
 
 
-let fakeStoreUrl = 'https://fakestoreapi.com/products/1'
+let fakeStoreUrl = 'https://fakestoreapi.com/products?limit=18'
 fetch(fakeStoreUrl)
     .then(function(response) {
         return response.json()
     })
     .then (function(data) {
-        let productTitle = document.querySelector('.product-title');
-        //let ImageEl = document.getElementsByTagName('img');
-        let productPrice = document.querySelector('.product-price');
-        let productDescription = document.querySelector('.product-description');
+        let productTitle = document.querySelectorAll('.product-title');
+        let productPrice = document.querySelectorAll('.product-price');
+        let productRating = document.querySelectorAll('.product-rating');
         
-        productTitle.textContent = data.title;
-        //productImage = ImageEl.attr('src', data.image);
-        productPrice.textContent = data.price;
-        productDescription.textContent = data.description;
-    })
+        
+        for (var i = 0; i < data.length; i++) {
+        
+        productTitle[i].textContent = data[i].title;
+        productPrice[i].textContent = "$" + data[i].price;
+        productRating[i].textContent = "Rating: " + data[i].rating.rate + " ⭐️";
+        $('img').attr('src', data[i].image);
+
+    }
+    });
