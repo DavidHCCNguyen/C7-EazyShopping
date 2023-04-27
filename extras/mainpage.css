@@ -11,9 +11,10 @@
 }
 
 /* ALL WITH SUBNAV IS FOR THE HEADER */
+
 .subnav-hero-section {
   text-align: center;
-  background:#264364;
+  background: #1779ba;
   background-size: cover;
   position: relative;
   overflow: visible;
@@ -65,7 +66,6 @@
 .subnav-hero-subnav li a:hover {
   background: rgba(254, 254, 254, 0.15);
 }
-
 
 /* header {
   display: flex;
