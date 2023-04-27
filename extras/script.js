@@ -18,7 +18,11 @@ fetch(fakeStoreUrl)
         productTitle[i].textContent = data[i].title;
         productPrice[i].textContent = "$" + data[i].price;
         productRating[i].textContent = "Rating: " + data[i].rating.rate + " ⭐️";
-        $('img').attr('src', data[i].image);
+        
+            for (var j = 0; j < data.length; j++) {
+                var productImage = document.getElementsByTagName("img")[j]
+                productImage.setAttribute("src", data[j].image);
+            }
 
     }
     });
