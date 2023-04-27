@@ -8,7 +8,67 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Style for the sign-in form*/
+.sign-in-form {
+  padding: 1rem 1.5em;
+  border-radius: .5rem;
+  background-color:#1779ba;
+  border: 1px solid whitesmoke;
+  border-color: #adadad;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.sign-in-form h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sign-in-form label {
+  text-transform: uppercase;
+  color: #adadad;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sign-in-form input {
+  color: white;
+}
+
+.sign-in-form input:focus {
+  opacity: .8;
+}
+
+.sign-in-form-username,
+.sign-in-form-password {
+  border-radius: 30px;
+  border: none;
+  opacity: .1;
+  transition: all ease .4s;
+}
+
+.sign-in-form-button {
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 1rem;
+  transition: all ease .4s;
+}
+
+.sign-in-form-button:hover {
+  background-color: #44c8ed;
+  border-color: #44c8ed;
+}
+
+/* Style for the sign-in form
 .form-signin {
   max-width: 400px;
   margin: 0 auto;
@@ -23,7 +83,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Style for form controls*/
+/* Style for form controls
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -36,31 +96,32 @@ body {
   z-index: 2;
 }
 
-/* Style for email input*/
+/* Style for email input
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* Style for password input*/ 
+/* Style for password input
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-/* Style for labels*/
+/* Style for labels
 .form-signin label {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* Style for buttons*/
+/* Style for buttons
 .btn {
   display: block;
   width: 100%;
   height: 50px;
+  
   padding: 10px 15px;
   font-size: 16px;
   font-weight: 700;
