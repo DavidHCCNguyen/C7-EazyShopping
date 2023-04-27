@@ -1,14 +1,16 @@
+/* GOOGLE FONTS' LINK */
+
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
+/* THIS CSS STYLE IS FOR SIGN-IN FORM */
 /* Set body padding and background color */
 body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
   box-sizing: border-box;
-  font-family: 'Alkatra', cursive;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 /* Style for the sign-in form */
 .form-signin {
@@ -45,7 +47,7 @@ body {
   border-bottom-left-radius: 0;
 }
 
-/* Style for password input */
+/* Style for password input  */
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
@@ -75,3 +77,4 @@ aside {
 
   display: none;
 }
+
