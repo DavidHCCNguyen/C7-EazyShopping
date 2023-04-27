@@ -70,6 +70,7 @@ To provide flexibility to users, the application will also offer an option to pa
 ## References
 - Necolas' [Normalize.css](https://github.com/necolas/normalize.css) for better view for small, medium and large screens.
 - [Foundation CSS Framework](https://get.foundation/sites/docs/installation.html).
+- [Foundation's Building Blocks](https://get.foundation/building-blocks/).
 - [W3S](https://www.w3schools.com/css/) for more css techniques.
 
 ## Credits
