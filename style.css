@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-
+/* THIS CSS STYLE IS FOR SIGN-IN FORM */
 /* Set body padding and background color */
 body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
   box-sizing: border-box;
-  font-family: 'Alkatra', cursive;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-/* Style for the sign-in form */
+/* Style for the sign-in form*/
 .form-signin {
   max-width: 400px;
   margin: 0 auto;
@@ -25,7 +23,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Style for form controls */
+/* Style for form controls*/
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -38,27 +36,27 @@ body {
   z-index: 2;
 }
 
-/* Style for email input */
+/* Style for email input*/
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* Style for password input */
+/* Style for password input*/ 
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-/* Style for labels */
+/* Style for labels*/
 .form-signin label {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* Style for buttons */
+/* Style for buttons*/
 .btn {
   display: block;
   width: 100%;
@@ -75,3 +73,4 @@ aside {
 
   display: none;
 }
+
