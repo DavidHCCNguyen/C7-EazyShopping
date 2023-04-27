@@ -69,7 +69,8 @@ To provide flexibility to users, the application will also offer an option to pa
 
 ## References
 - Necolas' [Normalize.css](https://github.com/necolas/normalize.css) for better view for small, medium and large screens.
-- [UI Kit](https://getuikit.com/docs/installation) CSS framework or Foundation (to edit)
+- [Foundation CSS Framework](https://get.foundation/sites/docs/installation.html).
+- [W3S](https://www.w3schools.com/css/) for more css techniques.
 
 ## Credits
 
