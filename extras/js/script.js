@@ -1,7 +1,3 @@
-
-
-
-
 let fakeStoreUrl = 'https://fakestoreapi.com/products?limit=18'
 fetch(fakeStoreUrl)
     .then(function(response) {

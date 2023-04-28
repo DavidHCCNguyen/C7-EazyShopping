@@ -16,4 +16,3 @@ window.addEventListener('load', function() {
       // to indicate that sign-up was successful
     });
   });
-  
