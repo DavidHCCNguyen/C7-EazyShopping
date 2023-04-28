@@ -104,6 +104,45 @@ header button[type="submit"] {
   display: flex;
 } */
 
+/* CSS for the product display page */
+
+.shop-products {
+  font-family: 'Slabo 27px', serif;
+  font-weight: bolder;
+  position:relative;
+  left:650px;
+  color:#175ba3;
+  font-size:50px;
+}
+.product-title, .product-rating {
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  font-size: 23px;
+  color:#175ba3
+}
+
+.product-price {
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  font-size: 30px;
+  color:#175ba3
+
+}
+.button {
+  width:fit-content;
+  height:fit-content;
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  font-size: 20px; 
+}
+
+.card-section {
+  display:grid;
+  border:0.1px solid #175ba3;
+}
+
+
+
 aside {
   flex: 1;
   padding: 1rem;
@@ -158,6 +197,3 @@ main {
   cursor: pointer;
 }
 
-h3 {
-  position: inherit;
-}
