@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
 /* THIS IS THE MAIN CSS - ADD HERE EVERYTHING ABOUT THE MAIN PAGE */
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 10;
+  padding: 10;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
 }
@@ -32,6 +33,12 @@
 
 .subnav-hero-section .subnav-hero-headline {
   color: #fefefe;
+  display: flex;
+}
+
+.subnav-hero-headline h1 {
+  font-size: 100px; 
+  display:flex;
 }
 
 .subnav-hero-subnav {
@@ -67,65 +74,27 @@
   background: rgba(254, 254, 254, 0.15);
 }
 
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #333;
-  color: #fff;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-header form {
-  display: flex;
-}
-
-header input[type="text"] {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  border: none;
-  border-radius: 5px;
-}
-
-header button[type="submit"] {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-}
-
-.container {
-  display: flex;
-} */
-
 /* CSS for the product display page */
-
 .shop-products {
   font-family: 'Slabo 27px', serif;
   font-weight: bolder;
   position:relative;
   left:650px;
-  color:#175ba3;
+  color:#1779ba;
   font-size:50px;
 }
 .product-title, .product-rating {
   font-family: 'Slabo 27px', serif;
   font-weight: bold;
   font-size: 23px;
-  color:#175ba3
+  color:#1779ba;
 }
 
 .product-price {
   font-family: 'Slabo 27px', serif;
   font-weight: bold;
   font-size: 30px;
-  color:#175ba3
+  color:#175ba3;
 
 }
 .button {
@@ -138,10 +107,8 @@ header button[type="submit"] {
 
 .card-section {
   display:grid;
-  border:0.1px solid #175ba3;
+  border:0.1px solid #1779ba;
 }
-
-
 
 aside {
   /* flex: 1; */
@@ -197,7 +164,7 @@ main {
   cursor: pointer;
 }
 
-/* CSS FOR THE cart */
+/* CSS FOR THE CART */
 
 .checkout-summary {
   max-width: 500px;
@@ -254,5 +221,41 @@ main {
   border: 1px solid #e6e6e6;
   border-top: none;
 }
-
 /* END CSS FOR CART */
+
+/* FOOTER */
+.marketing-site-footer-bottom {
+  background: #1779ba;
+  padding: 1rem ;
+  color: #fefefe;
+}
+
+.marketing-site-footer-bottom p,
+.marketing-site-footer-bottom .menu {
+  margin-bottom: 0;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links a {
+  color: #fefefe;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .marketing-site-footer-bottom {
+    text-align: center;
+  }
+}

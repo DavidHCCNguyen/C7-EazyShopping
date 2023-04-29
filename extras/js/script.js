@@ -22,3 +22,14 @@ fetch(fakeStoreUrl)
 
     }
     });
+
+
+
+
+// initialise all applications
+ function init() {
+  
+ }
+
+ //call init
+ init();
