@@ -1,4 +1,4 @@
-/* THIS CSS STYLE IS FOR LOG-IN AND SIGN-UP FORM */
+/* THIS CSS STYLE IS FOR LOG-IN AND FORM */
 /* Set body padding and background color */
 body {
   padding-top: 40px;
@@ -37,7 +37,7 @@ body {
 }
 
 .sign-in-form input {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .sign-in-form input:focus {
