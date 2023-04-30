@@ -1,0 +1,261 @@
+/* Google Fonts' Links */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+/* THIS IS THE MAIN CSS - ADD HERE EVERYTHING ABOUT THE MAIN PAGE */
+
+* {
+  box-sizing: border-box;
+  margin: 10;
+  padding: 10;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+/* ALL WITH SUBNAV IS FOR THE HEADER */
+
+.subnav-hero-section {
+  text-align: center;
+  background: #1779ba;
+  background-size: cover;
+  position: relative;
+  overflow: visible;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
+}
+
+.subnav-hero-section .subnav-hero-headline {
+  color: #fefefe;
+  display: flex;
+}
+
+.subnav-hero-headline h1 {
+  font-size: 100px; 
+  display:flex;
+}
+
+.subnav-hero-subnav {
+  float: none;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+}
+
+.subnav-hero-subnav li {
+  float: none;
+  display: inline-block;
+}
+
+.subnav-hero-subnav li a {
+  padding: 0.9rem 1rem;
+  font-size: 0.75rem;
+  color: #fefefe;
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.35s ease-in-out;
+}
+
+.subnav-hero-subnav li a.is-active {
+  background: rgba(254, 254, 254, 0.15);
+}
+
+.subnav-hero-subnav li a:hover {
+  background: rgba(254, 254, 254, 0.15);
+}
+
+/* CSS for the product display page */
+.shop-products {
+  font-family: 'Slabo 27px', serif;
+  font-weight: bolder;
+  position:relative;
+  left:650px;
+  color:#1779ba;
+  font-size:50px;
+}
+.product-title, .product-rating {
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  font-size: 23px;
+  color:#1779ba;
+}
+
+.product-price {
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  font-size: 30px;
+  color:#175ba3;
+
+}
+.button {
+  width:fit-content;
+  height:fit-content;
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  font-size: 20px; 
+}
+
+.card-section {
+  display:grid;
+  border:0.1px solid #1779ba;
+}
+
+aside {
+  /* flex: 1; */
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav li {
+  margin-bottom: 0.5rem;
+}
+
+aside nav li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.box {
+  flex-basis: calc(50% - 1rem);
+  height: 200px;
+  margin: 0.5rem;
+  background-color: #ccc;
+}
+
+.bought-products {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.bought-products li {
+  margin-bottom: 0.5rem;
+}
+
+.total-button {
+  display: block;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* CSS FOR THE CART */
+
+.checkout-summary {
+  max-width: 500px;
+  background-color: #fefefe;
+}
+
+.checkout-summary-title {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+}
+
+.checkout-summary-item {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.checkout-summary-item .item-name,
+.checkout-summary-item .item-price {
+  padding: 0 1rem;
+}
+
+.checkout-summary-item .item-name p,
+.checkout-summary-item .item-price p {
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-summary-item .title {
+  font-weight: bold;
+}
+
+.checkout-summary-details {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+/* END CSS FOR CART */
+
+/* FOOTER */
+.marketing-site-footer-bottom {
+  background: #1779ba;
+  padding: 1rem ;
+  color: #fefefe;
+}
+
+.marketing-site-footer-bottom p,
+.marketing-site-footer-bottom .menu {
+  margin-bottom: 0;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links a {
+  color: #fefefe;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .marketing-site-footer-bottom {
+    text-align: center;
+  }
+}
