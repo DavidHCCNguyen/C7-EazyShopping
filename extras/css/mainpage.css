@@ -146,7 +146,7 @@ header button[type="submit"] {
 
 
 
-aside {
+.checkout-cart {
   /* flex: 1; */
   padding: 1rem;
   background-color: #f2f2f2;

@@ -1,4 +1,10 @@
 
+var addToCartButton = document.querySelectorAll('.button');
+var checkoutCart = document.querySelector(".checkout-cart");
+var productCartItems = []; 
+var cartTotals = document.createElement('p');
+var totalEl = document.createElement('strong');
+
 // Obtains data from the Server APi and displaying in JSON format using the specified parameters
 let fakeStoreUrl = 'https://fakestoreapi.com/products?limit=18'
 fetch(fakeStoreUrl)
@@ -16,7 +22,9 @@ fetch(fakeStoreUrl)
         productTitle[i].textContent = data[i].title;
         productPrice[i].textContent = "$" + data[i].price;
         productRating[i].textContent = "Rating: " + data[i].rating.rate + " ⭐️";
-        
+        addToCartButton[i].setAttribute('data-product-name', data[i].title);
+        addToCartButton[i].setAttribute('data-product-price', data[i].price);
+
             for (var j = 0; j < data.length; j++) {
                 var productImage = document.getElementsByTagName("img")[j]
                 productImage.setAttribute("src", data[j].image);
@@ -24,3 +32,63 @@ fetch(fakeStoreUrl)
 
     }
     });
+
+
+    addToCartButton.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var product = {
+                name: button.dataset.productName,
+                price: button.dataset.productPrice,
+            };
+            productCartItems.push(product);
+            updateCheckoutSummary();
+    
+        });
+    
+    });
+    
+     function updateCheckoutSummary() {
+        const cartList = document.querySelector('.checkout-summary-item');
+        cartList.innerHTML = '';
+        
+        productCartItems.forEach(function(item) {
+            const li = document.createElement('li');
+            const name = document.createElement('p');
+            name.textContent = item.name;
+            li.appendChild(name);
+            const price = document.createElement('p');
+            price.textContent = '$' + item.price;
+            li.appendChild(price);
+            cartList.appendChild(li);
+            
+            cartList.setAttribute('style', "display:block;");
+            price.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px; bottom:45px;");
+            name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif;");
+            li.setAttribute('style', "width:fit-content;")
+            
+        });
+        console.log(productCartItems);
+        let total = 0.00;
+    
+        for (var i = 0; i < productCartItems.length; i++) {
+    
+              total += parseInt(productCartItems[i].price);
+              
+            
+        }
+        
+        console.log(total);
+        
+        
+        
+        cartTotals.textContent = "$" + total;
+        totalEl.textContent = "Total";
+        cartList.appendChild(cartTotals);
+        cartList.appendChild(totalEl);
+        
+        
+        cartTotals.setAttribute('style', "font-weight:bold; font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px;")
+        totalEl.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; bottom:45px;")
+        checkoutCart.setAttribute('style', 'display:inline-block; position:relative; left: 1200px; bottom:2000px;')
+    
+     };
