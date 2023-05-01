@@ -1,3 +1,5 @@
+
+// Obtains data from the Server APi and displaying in JSON format using the specified parameters
 let fakeStoreUrl = 'https://fakestoreapi.com/products?limit=18'
 fetch(fakeStoreUrl)
     .then(function(response) {
@@ -10,7 +12,7 @@ fetch(fakeStoreUrl)
         
         
         for (var i = 0; i < data.length; i++) {
-        
+        // Loop utilized to display each product's title, price, rating and image to the home page. 
         productTitle[i].textContent = data[i].title;
         productPrice[i].textContent = "$" + data[i].price;
         productRating[i].textContent = "Rating: " + data[i].rating.rate + " ⭐️";
