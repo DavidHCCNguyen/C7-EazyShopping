@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stores Map</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#map {
+			height: 500px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Stores Map</h1>
+	<div id="map"></div>
+
+	<!-- Include the Baidu Maps API and call the initMap function when it's loaded -->
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=YOUR_API_KEY&s=1&callback=initMap"></script>
+
+	<script>
+		function initMap() {
+			// Create a new Baidu Map object and set the initial center and zoom level
+			var map = new BMap.Map("map");
+			map.centerAndZoom(new BMap.Point(135.0, -25.0), 5);
+
+			// Define an array of stores, each with an address and name
+			var stores = [
+				{ address: "Sydney, New South Wales", name: "Store 1" },
+				{ address: "Melbourne, Victoria", name: "Store 2" },
+				{ address: "Brisbane, Queensland", name: "Store 3" }
+			];
+
+			// Loop through the stores array and geocode each address to get its latitude and longitude
+			stores.forEach(function(store) {
+				var geocoder = new BMap.Geocoder();
+				geocoder.getPoint(store.address, function(point) {
+					if (point) {
+						// If the geocode was successful, create a marker on the map for the store's location
+						var marker = new BMap.Marker(point);
+						map.addOverlay(marker);
+						var infoWindow = new BMap.InfoWindow(store.name);
+						// Add an event listener to open an info window with the store's name when the marker is clicked
+						marker.addEventListener("click", function() {
+							this.openInfoWindow(infoWindow);
+						});
+					} else {
+						// If the geocode failed, log an error message to the console
+						console.log("Geocode failed for address: " + store.address);
+					}
+				}, "Australia");
+			});
+		}
+	</script>
+</body>
+</html>

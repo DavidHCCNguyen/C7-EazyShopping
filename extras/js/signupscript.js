@@ -1,7 +1,7 @@
 // Get the form and the input fields
 const form = document.querySelector('form');
-const usernameInput = document.querySelector('#sign-up-form-username');
-const passwordInput = document.querySelector('#sign-up-form-password');
+const usernameInput = document.querySelector('#sign-in-form-username');
+const passwordInput = document.querySelector('#sign-in-form-password');
 
 // Listen for form submission
 form.addEventListener('submit', (event) => {
@@ -17,5 +17,5 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('password', password);
 
   // Redirect the user to another page in the same directory
-  window.location.href = "../login.html";
+  window.location.href = "./login.html";
 });
