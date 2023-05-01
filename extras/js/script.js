@@ -72,7 +72,7 @@ fetch(fakeStoreUrl)
     
         for (var i = 0; i < productCartItems.length; i++) {
     
-              total += parseInt(productCartItems[i].price);
+              total += parseFloat(productCartItems[i].price);
               
             
         }
@@ -81,14 +81,14 @@ fetch(fakeStoreUrl)
         
         
         
-        cartTotals.textContent = "$" + total;
+        cartTotals.textContent = "$" + total.toFixed(2);
         totalEl.textContent = "Total";
         cartList.appendChild(cartTotals);
         cartList.appendChild(totalEl);
         
         
-        cartTotals.setAttribute('style', "font-weight:bold; font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px;")
-        totalEl.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; bottom:45px;")
-        checkoutCart.setAttribute('style', 'display:inline-block; position:relative; left: 1200px; bottom:2000px;')
+        cartTotals.setAttribute('style', "font-weight:bold; font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px;");
+        totalEl.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; bottom:45px;");
+        checkoutCart.setAttribute('style', 'display:block; position:relative; left: 1200px; bottom:1300px;');
     
      };
