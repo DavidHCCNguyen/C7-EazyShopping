@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
     // Check if login credentials match saved username and password
     if (username === savedUsername && password === savedPassword) {
       // Redirect user to another HTML page
-      window.location.href = 'index.html';
+      window.location.href = './extras/homepage.html';
     } else {
       // Remove any existing error element
       const errorElement = document.querySelector('.error-message');

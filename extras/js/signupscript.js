@@ -17,5 +17,5 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('password', password);
 
   // Redirect the user to another page in the same directory
-  window.location.href = "./login.html";
+  window.location.href = "../index.html";
 });
