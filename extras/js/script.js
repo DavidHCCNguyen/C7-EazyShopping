@@ -63,7 +63,7 @@ fetch(fakeStoreUrl)
             
             cartList.setAttribute('style', "display:block;");
             price.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px; bottom:45px;");
-            name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif;");
+            name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; width: 350px;");
             li.setAttribute('style', "width:fit-content;")
             
         });
@@ -89,6 +89,6 @@ fetch(fakeStoreUrl)
         
         cartTotals.setAttribute('style', "font-weight:bold; font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px;");
         totalEl.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; bottom:45px;");
-        checkoutCart.setAttribute('style', 'display:block; position:relative; left: 1200px; bottom:1300px;');
+        checkoutCart.setAttribute('style', 'display:block;');
     
      };
