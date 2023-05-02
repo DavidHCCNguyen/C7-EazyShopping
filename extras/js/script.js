@@ -157,3 +157,22 @@ fetch(fakeStoreUrl)
         checkoutCart.setAttribute('style', 'display:block;');
     
      };
+
+
+     $( function() {
+        $( "#message" ).dialog({
+          autoOpen: false,
+          show: {
+            effect: "blind",
+            duration: 1000
+          },
+          hide: {
+            effect: "explode",
+            duration: 1000
+          }
+        });
+     
+        $( "#opener" ).on( "click", function() {
+          $( "#message" ).dialog( "open" );
+        });
+      } );
