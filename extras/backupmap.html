@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Stores Map</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		#map {
-			height: 500px;
-			width: 100%;
-		}
-	</style>
-</head>
-<body>
-	<h1>Stores Map</h1>
-	<div id="map"></div>
+  <head>
+    <title>Map Example</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2fC0EX4Fx78gsuz5mEsZOXLWBmji_OsU"></script>
+    <script>
+      function initMap() {
+        var australiaLatLng = {lat: -25.2744, lng: 133.7751};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5,
+          center: australiaLatLng
+        });
 
-	<!-- Include the Baidu Maps API and call the initMap function when it's loaded -->
-	<script src="http://api.map.baidu.com/api?v=2.0&ak=YOUR_API_KEY&s=1&callback=initMap"></script>
+        var stores = [
+          {
+            name: 'Big Store NSW',
+            location: {lat: -33.8688, lng: 151.2093},
+            address: '123 Main St, Sydney NSW 2000'
+          },
+          {
+            name: 'Big Store VIC',
+            location: {lat: -37.8136, lng: 144.9631},
+            address: '456 Main St, Melbourne VIC 3000'
+          },
+          {
+            name: 'Big Store QLD',
+            location: {lat: -27.4698, lng: 153.0251},
+            address: '789 Main St, Brisbane QLD 4000'
+          },
+          {
+            name: 'Big Store SA',
+            location: {lat: -34.9285, lng: 138.6007},
+            address: '101 Main St, Adelaide SA 5000'
+          },
+          {
+            name: 'Big Store WA',
+            location: {lat: -31.9505, lng: 115.8605},
+            address: '555 Main St, Perth WA 6000'
+          },
+          {
+            name: 'Big Store TAS',
+            location: {lat: -42.8821, lng: 147.3272},
+            address: '222 Main St, Hobart TAS 7000'
+          },
+          {
+            name: 'Big Store NT',
+            location: {lat: -12.4634, lng: 130.8456},
+            address: '333 Main St, Darwin NT 0800'
+          },
+          {
+            name: 'Big Store ACT',
+            location: {lat: -35.2820, lng: 149.1287},
+            address: '444 Main St, Canberra ACT 2600'
+          }
+        ];
 
-	<script>
-		function initMap() {
-			// Create a new Baidu Map object and set the initial center and zoom level
-			var map = new BMap.Map("map");
-			map.centerAndZoom(new BMap.Point(135.0, -25.0), 5);
+        stores.forEach(function(store) {
+          var marker = new google.maps.Marker({
+            position: store.location,
+            map: map,
+            title: store.name
+          });
 
-			// Define an array of stores, each with an address and name
-			var stores = [
-				{ address: "Sydney, New South Wales", name: "Store 1" },
-				{ address: "Melbourne, Victoria", name: "Store 2" },
-				{ address: "Brisbane, Queensland", name: "Store 3" }
-			];
+          var infowindow = new google.maps.InfoWindow({
+            content: '<div><strong>' + store.name + '</strong><br>' + store.address + '</div>'
+          });
 
-			// Loop through the stores array and geocode each address to get its latitude and longitude
-			stores.forEach(function(store) {
-				var geocoder = new BMap.Geocoder();
-				geocoder.getPoint(store.address, function(point) {
-					if (point) {
-						// If the geocode was successful, create a marker on the map for the store's location
-						var marker = new BMap.Marker(point);
-						map.addOverlay(marker);
-						var infoWindow = new BMap.InfoWindow(store.name);
-						// Add an event listener to open an info window with the store's name when the marker is clicked
-						marker.addEventListener("click", function() {
-							this.openInfoWindow(infoWindow);
-						});
-					} else {
-						// If the geocode failed, log an error message to the console
-						console.log("Geocode failed for address: " + store.address);
-					}
-				}, "Australia");
-			});
-		}
-	</script>
-</body>
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+        });
+      }
+    </script>
+  </head>
+  <body onload="initMap()">
+    <div id="map"></div>
+  </body>
 </html>
