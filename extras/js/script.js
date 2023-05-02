@@ -41,7 +41,6 @@ fetch(fakeStoreUrl)
         });
     
     });
-  });
   
   function updateCheckoutSummary() {
     const cartList = document.querySelector(".checkout-summary-item");
