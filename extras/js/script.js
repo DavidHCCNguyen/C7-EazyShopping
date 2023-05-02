@@ -158,6 +158,7 @@ fetch(fakeStoreUrl)
     
      };
 
+
      $( function() {
         $( "#message" ).dialog({
           autoOpen: false,
