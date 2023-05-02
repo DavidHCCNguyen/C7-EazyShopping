@@ -121,4 +121,48 @@ fetch(fakeStoreUrl)
     );
   }
     
-  
+     function updateCheckoutSummary() {
+        const cartList = document.querySelector('.checkout-summary-item');
+        cartList.innerHTML = '';
+        
+        productCartItems.forEach(function(item) {
+            const li = document.createElement('li');
+            const name = document.createElement('p');
+            name.textContent = item.name;
+            li.appendChild(name);
+            const price = document.createElement('p');
+            price.textContent = '$' + item.price;
+            li.appendChild(price);
+            cartList.appendChild(li);
+            
+            cartList.setAttribute('style', "display:block;");
+            price.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px; bottom:50px;");
+            name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; width: 350px;");
+            li.setAttribute('style', "width:fit-content;")
+            
+        });
+        console.log(productCartItems);
+        let total = 0.00;
+    
+        for (var i = 0; i < productCartItems.length; i++) {
+    
+              total += parseFloat(productCartItems[i].price);
+              
+            
+        }
+        
+        console.log(total);
+        
+        
+        
+        cartTotals.textContent = "$" + total.toFixed(2);
+        totalEl.textContent = "Total";
+        cartList.appendChild(cartTotals);
+        cartList.appendChild(totalEl);
+        
+        
+        cartTotals.setAttribute('style', "font-weight:bold; font-size: 25px;font-family: 'Slabo 27px', serif; position:relative; left:400px;");
+        totalEl.setAttribute('style', "font-weight:bold; font-size: 25px;font-family: 'Slabo 27px', serif; position:relative; bottom:50px;");
+        checkoutCart.setAttribute('style', 'display:block;');
+    
+     };
