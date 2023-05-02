@@ -113,8 +113,13 @@
   
 }
 
-
-
+.checkout-cart {
+  /* flex: 1; */
+  padding: 1rem;
+  background-color: #f2f2f2;
+  height:fit-content;
+  display:none; 
+}
 
 
 /* aside nav ul {

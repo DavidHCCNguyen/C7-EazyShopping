@@ -7,49 +7,40 @@ var totalEl = document.createElement("strong");
 // Obtains data from the Server APi and displaying in JSON format using the specified parameters
 let fakeStoreUrl = "https://fakestoreapi.com/products?limit=18";
 fetch(fakeStoreUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    let productTitle = document.querySelectorAll(".product-title");
-    let productPrice = document.querySelectorAll(".product-price");
-    let productRating = document.querySelectorAll(".product-rating");
+    .then(function(response) {
+        return response.json()
+    })
+    .then (function(data) {
+        let productTitle = document.querySelectorAll('.product-title');
+        let productPrice = document.querySelectorAll('.product-price');
+        let productRating = document.querySelectorAll('.product-rating');
+        
+        for (var i = 0; i < data.length; i++) {
+        // Loop utilized to display each product's title, price, rating and image to the home page. 
+        productTitle[i].textContent = data[i].title;
+        productPrice[i].textContent = "$" + data[i].price;
+        productRating[i].textContent = "Rating: " + data[i].rating.rate + " ⭐️";
+        addToCartButton[i].setAttribute('data-product-name', data[i].title);
+        addToCartButton[i].setAttribute('data-product-price', data[i].price);
 
-    for (var i = 0; i < data.length; i++) {
-      // Loop utilized to display each product's title, price, rating and image to the home page.
-      productTitle[i].textContent = data[i].title;
-      productPrice[i].textContent = "$" + data[i].price;
-      productRating[i].textContent = "Rating: " + data[i].rating.rate + " ⭐️";
-      addToCartButton[i].setAttribute("data-product-name", data[i].title);
-      addToCartButton[i].setAttribute("data-product-price", data[i].price);
-
-      for (var j = 0; j < data.length; j++) {
-        var productImage = document.getElementsByTagName("img")[j];
-        productImage.setAttribute("src", data[j].image);
-      }
+            for (var j = 0; j < data.length; j++) {
+                var productImage = document.getElementsByTagName("img")[j]
+                productImage.setAttribute("src", data[j].image);
+            }
     }
   });
 
-  addToCartButton.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var product = {
-        name: button.dataset.productName,
-        price: button.dataset.productPrice,
-      };
-      // Load existing data from local storage
-      const storedItems = JSON.parse(localStorage.getItem("productCartItems"));
-      if (storedItems && storedItems.length > 0) {
-        // If there are existing items, add the new one to the array
-        productCartItems = storedItems;
-        productCartItems.push(product);
-      } else {
-        // Otherwise, create a new array with the new item
-        productCartItems = [product];
-      }
-      localStorage.setItem("productCartItems", JSON.stringify(productCartItems)); // Save productCartItems to local storage
-      updateCheckoutSummary();
+    addToCartButton.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var product = {
+                name: button.dataset.productName,
+                price: button.dataset.productPrice,
+            };
+            productCartItems.push(product);
+            updateCheckoutSummary();
+        });
+    
     });
-  });
   
   function updateCheckoutSummary() {
     const cartList = document.querySelector(".checkout-summary-item");
@@ -150,7 +141,7 @@ fetch(fakeStoreUrl)
               
             
         }
-        
+       
         console.log(total);
         
         
