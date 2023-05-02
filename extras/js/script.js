@@ -72,16 +72,16 @@ fetch(fakeStoreUrl)
     
         for (var i = 0; i < productCartItems.length; i++) {
     
-              total += parseInt(productCartItems[i].price);
-              
+              total += parseFloat(productCartItems[i].price);
+              console.log(typeof productCartItems[i].price)
             
         }
         
-        console.log(total);
+        console.log(typeof total);
         
         
-        
-        cartTotals.textContent = "$" + total;
+        console.log(cartTotals)
+        cartTotals.textContent = "$" + total.toFixed(2);
         totalEl.textContent = "Total";
         cartList.appendChild(cartTotals);
         cartList.appendChild(totalEl);
