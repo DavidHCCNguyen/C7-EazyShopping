@@ -2,37 +2,25 @@ Readme Group Project
 
 # EazyShopping
 ### Group Project: Web Application
-
 ## USER STORY
-
-As a regular online shopper, 
-I want to purchase my favorite items from the convenience of my home, 
+As a regular online shopper,
+I want to purchase my favorite items from the convenience of my home,
 so that I can engage in other tasks.
-
 ## ACCEPTANCE CRITERIA
-
 WHEN I open the application
 THEN the landing page should display a section to input login details, a menu bar and a search bar for ease of navigation
-
 WHEN I attempt to type-in my password to log in to the application,
 THEN the input field should include an Auto-complete function as a regular shopper.
-
 WHEN I open the application,
 THEN I am presented with the products on offer, each product with its respective image and description.
-
-WHEN I click on a product of interest, 
+WHEN I click on a product of interest,
 THE application should automatically create a new list of shopping items or add to an already existing list to the right of the window.
-
 WHEN I accidentally leave the application and return,
 THEN I am presented with my existing list of shopping items, without the need to start shopping from the beginning.
-
 WHEN I have completed my shopping,
-THEN I am presented with a list of the total amount required to pay. 
-
+THEN I am presented with a list of the total amount required to pay.
 WHEN I have completed my shopping,
 THEN I am presented with an option of paying in a different currency.
-
-
 ## Table of Contents
 - [EazyShopping](#eazyshopping)
     - [Group Project: Web Application](#group-project-web-application)
@@ -51,17 +39,11 @@ THEN I am presented with an option of paying in a different currency.
   - [Authors](#authors)
   
 ## Project Description
-
-Our project aims to provide a convenient and seamless shopping experience to regular online shoppers. Our platform will enable users to purchase their favorite items from the comfort of their home, allowing them to engage in other tasks while shopping. 
-
-Upon opening the application, users will be presented with a landing page displaying a section to input login details, a menu bar and a search bar for ease of navigation. To streamline the login process, the input field for password will include an auto-complete function for regular shoppers. 
-
-Users will then be presented with the products on offer, each product with its respective image and description. When a user clicks on a product of interest, the application will automatically create a new list of shopping items or add to an already existing list to the right of the window. 
-
-If a user accidentally leaves the application and returns, they will be presented with their existing list of shopping items, without the need to start shopping from the beginning. Once a user has completed their shopping, they will be presented with a list of the total amount required to pay. 
-
+Our project aims to provide a convenient and seamless shopping experience to regular online shoppers. Our platform will enable users to purchase their favorite items from the comfort of their home, allowing them to engage in other tasks while shopping.
+Upon opening the application, users will be presented with a landing page displaying a section to input login details, a menu bar and a search bar for ease of navigation. To streamline the login process, the input field for password will include an auto-complete function for regular shoppers.
+Users will then be presented with the products on offer, each product with its respective image and description. When a user clicks on a product of interest, the application will automatically create a new list of shopping items or add to an already existing list to the right of the window.
+If a user accidentally leaves the application and returns, they will be presented with their existing list of shopping items, without the need to start shopping from the beginning. Once a user has completed their shopping, they will be presented with a list of the total amount required to pay.
 To provide flexibility to users, the application will also offer an option to pay in a different currency. With these features, our platform aims to provide a seamless shopping experience that saves users time and effort.
-
 ## Features
 - (MENTION HERE WHAT'S THE FEATURES OF THE APP)
 
