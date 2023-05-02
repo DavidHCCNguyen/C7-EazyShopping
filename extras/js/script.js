@@ -16,7 +16,6 @@ fetch(fakeStoreUrl)
         let productPrice = document.querySelectorAll('.product-price');
         let productRating = document.querySelectorAll('.product-rating');
         
-        
         for (var i = 0; i < data.length; i++) {
         // Loop utilized to display each product's title, price, rating and image to the home page. 
         productTitle[i].textContent = data[i].title;
@@ -29,10 +28,8 @@ fetch(fakeStoreUrl)
                 var productImage = document.getElementsByTagName("img")[j]
                 productImage.setAttribute("src", data[j].image);
             }
-
     }
     });
-
 
     addToCartButton.forEach(function(button) {
         button.addEventListener('click', function() {
@@ -42,7 +39,6 @@ fetch(fakeStoreUrl)
             };
             productCartItems.push(product);
             updateCheckoutSummary();
-    
         });
     
     });
@@ -72,15 +68,10 @@ fetch(fakeStoreUrl)
     
         for (var i = 0; i < productCartItems.length; i++) {
     
-              total += parseInt(productCartItems[i].price);
-              
-            
+              total += parseInt(productCartItems[i].price);       
         }
-        
+       
         console.log(total);
-        
-        
-        
         cartTotals.textContent = "$" + total;
         totalEl.textContent = "Total";
         cartList.appendChild(cartTotals);
