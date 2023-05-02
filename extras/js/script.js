@@ -62,7 +62,7 @@ fetch(fakeStoreUrl)
             cartList.appendChild(li);
             
             cartList.setAttribute('style', "display:block;");
-            price.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px; bottom:45px;");
+            price.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px; bottom:50px;");
             name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; width: 350px;");
             li.setAttribute('style', "width:fit-content;")
             
@@ -87,8 +87,8 @@ fetch(fakeStoreUrl)
         cartList.appendChild(totalEl);
         
         
-        cartTotals.setAttribute('style', "font-weight:bold; font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px;");
-        totalEl.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; bottom:45px;");
+        cartTotals.setAttribute('style', "font-weight:bold; font-size: 25px;font-family: 'Slabo 27px', serif; position:relative; left:400px;");
+        totalEl.setAttribute('style', "font-weight:bold; font-size: 25px;font-family: 'Slabo 27px', serif; position:relative; bottom:50px;");
         checkoutCart.setAttribute('style', 'display:block;');
     
      };
