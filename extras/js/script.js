@@ -88,7 +88,7 @@ fetch(fakeStoreUrl)
       name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; width: 350px;");
       li.setAttribute('style', "width:fit-content;")
       removeBtn.setAttribute('style', 
-      "background-color: #1779ba; border: none; color: white; padding: 5px 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;");
+      "background-color: #1779ba; border: none; border-radius: 8px; color: white; padding: 10px 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;");
     });
   
     let total = 0.00;
