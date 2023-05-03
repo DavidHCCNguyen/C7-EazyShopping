@@ -85,7 +85,7 @@ fetch(fakeStoreUrl)
   
       cartList.setAttribute('style', "display:block;");
       price.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; position:relative; left:400px; bottom:50px;");
-      name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; width: 350px;");
+      name.setAttribute('style', "font-size: 20px;font-family: 'Slabo 27px', serif; width: 300px;");
       li.setAttribute('style', "width:fit-content;")
       removeBtn.setAttribute('style', 
       "background-color: #1779ba; border: none; color: white; padding: 5px 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;");
