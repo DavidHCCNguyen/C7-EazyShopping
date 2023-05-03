@@ -1,4 +1,4 @@
-Readme Group Project
+Readme Group Project!
 
 # EazyShopping
 ### Group Project: Web Application
