@@ -40,17 +40,22 @@ THEN I am presented with an option of paying in a different currency.
   
 ## Project Description
 Our project aims to provide a convenient and seamless shopping experience to regular online shoppers. Our platform will enable users to purchase their favorite items from the comfort of their home, allowing them to engage in other tasks while shopping.
+
 Upon opening the application, users will be presented with a landing page displaying a section to input login details, a menu bar and a search bar for ease of navigation. To streamline the login process, the input field for password will include an auto-complete function for regular shoppers.
+
 Users will then be presented with the products on offer, each product with its respective image and description. When a user clicks on a product of interest, the application will automatically create a new list of shopping items or add to an already existing list to the right of the window.
+
 If a user accidentally leaves the application and returns, they will be presented with their existing list of shopping items, without the need to start shopping from the beginning. Once a user has completed their shopping, they will be presented with a list of the total amount required to pay.
-To provide flexibility to users, the application will also offer an option to pay in a different currency. With these features, our platform aims to provide a seamless shopping experience that saves users time and effort.
+
+To provide flexibility to users, the application will also offer where is the nearest store. With these features, our platform aims to provide a seamless shopping experience that saves users time and effort.
+
 ## Features
 - (MENTION HERE WHAT'S THE FEATURES OF THE APP)
 
 ## Installation and Usage
 - We cloned the [David](https://github.com/DavidHCCNguyen/EazyShopping)'s repository which is the main branch in on our local machine.
 - The remaining members - [Kana](https://github.com/anayoifediora), [Kristine](https://github.com/mcramileux), and [Maya](https://github.com/retnodamayanti), made our own feature branches to create our task and push them once it is done.
-- Chrome DevTools Console to check local storage and apis. 
+- Chrome DevTools Application to check local storage. 
 - (ADD MORE ONCE THE PROJECT IS FINISHED)
 
 ## Screenshots
@@ -59,20 +64,37 @@ To provide flexibility to users, the application will also offer an option to pa
 
 ## Technologies Used
 - HTML and CSS
-- Foundation CSS
+- CSS Foundation
 - Foundation Blocks
 - Necolas' Normalize CSS
 - Google Fonts
 - JavaScript
 - JQuery
 - W3Schools
-- Fake Store API and Open Exchange API (add the links)
+- Fake Store API
+- Location API
   
 ## Task Breakdown
-- David - creating the main branch and the login 
-- Kana - shop products
-- Kristine - header and navigation bar
-- Maya - shopping cart
+- David
+    - Created two HTMLs - one for logging in and signing up. 
+    - Created the basic css looks for it and also used a foundation for it so it fits the theme of the main page html. 
+    - Found a map API and used it to show Australia for the users to use for if they forget where some of their stores are located within this EazyShopping website/app.
+  
+- Kana
+    - Accessed the Fakestore Side API to fetch product data. 
+    - Ensured product data (including image, price and rating) displayed on the home page. 
+    - Worked on the checkout cart to display the selected products when the "add to cart" button is picked
+    - Created the checkout message as a modal.
+    - Wrote the User Story and Acceptance Criteria.
+  
+- Kristine
+    - Created the HTML and CSS part of the header and footer.
+    - Created the Responsiveness of the navigation bar.
+    - Overseen the codes, READme section and presentation.
+  
+- Maya
+   - Added ID attribute to the button and event listener on the add to cart button.
+   - Added item to local storage and display it on the cart, added remove button,
   
 ## Live Site and Repository
 - For finish product, go to this link ----> to be edited
@@ -83,6 +105,7 @@ To provide flexibility to users, the application will also offer an option to pa
 - [Foundation's Building Blocks](https://get.foundation/building-blocks/).
 - [W3S](https://www.w3schools.com/css/) for more css techniques.
 - [Chat.GPT](https://chat.openai.com/) for clearer explanation on creating our web application.
+- 
 
 ## License
 - This project is [MIT](https://choosealicense.com/licenses/mit/) license.
